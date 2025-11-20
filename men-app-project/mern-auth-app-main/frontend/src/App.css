@@ -1,0 +1,268 @@
+/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  background: #e6e5d3;
+  min-height: 100vh;
+}
+
+/* Fade-in animation */
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ----------------------------------------- */
+/* 🔥 AUTH SECTION — ORANGE SUNSET THEME */
+/* ----------------------------------------- */
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff9a3c, #ff5f6d);
+  padding: 20px;
+}
+
+.auth-box {
+  background: #ffffff;
+  padding: 55px 65px;
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 480px;
+  transition: transform 0.25s ease-in-out, box-shadow 0.25s;
+}
+
+.auth-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.28);
+}
+
+.auth-title {
+  font-size: 44px;
+  font-weight: 700;
+  text-align: center;
+  color: #7482d4;
+  margin-bottom: 10px;
+}
+
+.auth-subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+  font-size: 15px;
+}
+
+.auth-subtitle a {
+  color: #2155ff;
+  font-weight: 600;
+}
+
+/* Form */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input {
+  padding: 14px;
+  font-size: 17px;
+  border-radius: 8px;
+  border: 2px solid #ffccac;
+  background: #fff9f5;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #ff7a21;
+  box-shadow: 0 0 5px rgba(255, 122, 33, 0.5);
+  background: #fff5ee;
+}
+
+.form-input::placeholder {
+  color: #c9a897;
+}
+
+/* Submit Button */
+.submit-btn {
+  margin-top: 12px;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(135deg, rgb(192, 64, 86), rgb(197, 81, 100));
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+  box-shadow: 0 10px 25px rgba(255, 94, 0, 0.35);
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #ff6a00, #ff3d00);
+}
+
+.submit-btn:disabled {
+  background-color: #ffc8ac;
+  cursor: not-allowed;
+}
+
+/* Success & Error Messages */
+.message {
+  margin-top: 15px;
+  padding: 14px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 15px;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Footer (Your Name) */
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: yellow;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+}
+
+
+.message.success {
+  background-color: #ffe8d2;
+  color: #8a4b00;
+  border-left: 4px solid #ff7a21;
+}
+
+.message.error {
+  background-color: #ffd6d4;
+  color: #8a1c14;
+  border-left: 4px solid #ff3d00;
+}
+
+/* ----------------------------------------- */
+/* 🏠 HOME PAGE (Protected Page) */
+/* ----------------------------------------- */
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffb87a, #ff9166);
+  padding: 20px;
+}
+
+.home-box {
+  background: white;
+  padding: 50px;
+  border-radius: 18px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  width: 100%;
+  max-width: 650px;
+}
+
+.home-title {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ff4f1a;
+}
+
+/* User Info Card */
+.user-info {
+  background: #fff3e8;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  border-left: 5px solid #ff7a21;
+}
+
+.user-info h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.user-info p {
+  font-size: 16px;
+  margin: 8px 0;
+  color: #555;
+}
+
+/* Logout Button */
+.logout-btn {
+  width: 100%;
+  padding: 16px;
+  font-size: 17px;
+  color: white;
+  background: #ff3d00;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  font-weight: 600;
+}
+
+.logout-btn:hover {
+  background: #c62800;
+  transform: translateY(-2px);
+}
+
+/* Protected Message */
+.protected-message {
+  margin-top: 25px;
+  padding: 18px;
+  background-color: #ffeedb;
+  border-left: 4px solid #ff7a21;
+  border-radius: 6px;
+  color: #7a3d00;
+}
+
+/* ----------------------------------------- */
+/* 📱 RESPONSIVE */
+/* ----------------------------------------- */
+
+@media (max-width: 600px) {
+  .auth-box {
+    padding: 35px 25px;
+  }
+
+  .auth-title {
+    font-size: 32px;
+  }
+
+  .home-box {
+    padding: 30px;
+  }
+
+  .home-title {
+    font-size: 24px;
+  }
+}
